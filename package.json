@@ -1,0 +1,47 @@
+{
+  "name": "quantumpulse-panel",
+  "version": "1.0.0",
+  "description": "QuantumPulse Panel - Advanced AI Technology Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "npm run build-client",
+    "build-client": "cd client && npm install && npm run build",
+    "dev": "nodemon server.js",
+    "client": "cd client && npm start",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run build-client",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "quantumpulse",
+    "ai",
+    "technology",
+    "fullstack",
+    "react",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "QuantumPulse Technologies",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
+

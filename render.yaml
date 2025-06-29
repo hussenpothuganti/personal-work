@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: quantumpulse-panel
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: MONGO_URI
+        sync: false # Set to true if you want to sync with Render's UI for secrets
+      - key: CORS_ORIGIN
+        value: '*'
+      - key: RATE_LIMIT_WINDOW_MS
+        value: 900000
+      - key: RATE_LIMIT_MAX_REQUESTS
+        value: 100
+
+
